@@ -1,0 +1,182 @@
+import turtle as trt
+import time
+
+# ------------------- Setup Screen -------------------
+win = trt.Screen()
+win.setup(1250, 650)
+win.title("Hey My Favourite Girl")
+win.bgcolor('white')
+
+# ------------------- Create main turtle -------------------
+a = trt.Turtle()
+a.speed(3)
+a.hideturtle()
+a.width(4)
+
+# ------------------- Functions for heart -------------------
+def curve():
+    for i in range(200):
+        a.right(1)
+        a.forward(1)
+
+def heart():
+    a.fillcolor('red')
+    a.begin_fill()
+    a.left(140)
+    a.forward(113)
+    win.bgcolor('#ffcccc')
+    curve()
+    a.left(120)
+    curve()
+    a.forward(112)
+    a.end_fill()
+
+# ------------------- Draw Heart -------------------
+a.penup()
+a.setpos(0,-100)
+a.pendown()
+heart()
+
+# ------------------- Draw a Tulip -------------------
+a.penup()
+a.setpos(400,200)
+a.pendown()
+a.color('black','red')
+a.fillcolor('red')
+a.begin_fill()
+# tulip base
+a.circle(10,180)
+a.circle(25,110)
+a.left(50)
+a.circle(60,45)
+a.circle(20,170)
+a.right(24)
+a.forward(30)
+a.left(10)
+a.circle(30,110)
+a.forward(20)
+a.left(40)
+a.circle(90,70)
+a.circle(30,150)
+a.right(30)
+a.forward(15)
+a.circle(80,90)
+a.left(15)
+a.forward(45)
+a.right(165)
+a.forward(20)
+a.left(155)
+a.circle(150,80)
+a.left(50)
+a.circle(150,90)
+a.end_fill()
+
+# ------------------- Text Messages -------------------
+pen = trt.Turtle()
+pen.hideturtle()
+pen.speed(0)
+
+def txt():
+    pen.up()
+    pen.setpos(-600,95)
+    pen.down()
+    pen.color('deep pink')
+    pen.write('❤️ ❤️ ❤️ Hey My Favourite Girl ❤️ ❤️ ❤️', font=("Courier",15,"italic"))
+    time.sleep(1.5)
+
+    pen.up()
+    pen.setpos(-600,60)
+    pen.down()
+    pen.color('red')
+    pen.write("I made this small program just for you.",font=("Courier",15,"italic"))
+    time.sleep(1.5)
+
+    pen.up()
+    pen.setpos(-600,25)
+    pen.down()
+    pen.color('red')
+    pen.write("Sometimes words feel easier through a little code.",font=("Courier",15,"italic"))
+    time.sleep(2)
+
+    pen.up()
+    pen.setpos(-600,-10)
+    pen.down()
+    pen.color('#992600')
+    pen.write("Hey my favourite girl, I want to say I'm truly sorry.",font=("Courier",18,"italic"))
+    time.sleep(2.5)
+
+    pen.up() 
+    pen.setpos(-600,-45) 
+    pen.down()
+    pen.color('deep pink') 
+    pen.write("If I hurt you or made you feel bad, it was never my intention.", font=("Courier", 15, "italic"))
+    time.sleep(2)
+
+    pen.up() 
+    pen.setpos(-600,-75) 
+    pen.down() 
+    pen.color('deep pink') 
+    pen.write("You are someone very special, and your feelings matter to me.", font=("Courier", 15, "italic"))
+    time.sleep(2)
+
+    pen.up() 
+    pen.setpos(-600,-105) 
+    pen.down() 
+    pen.color('deep pink') 
+    pen.write("Your smile, your kindness, and the way you are…", font=("Courier", 15, "italic"))
+    time.sleep(2)
+
+    pen.up() 
+    pen.setpos(-600,-135) 
+    pen.down() 
+    pen.color('deep pink') 
+    pen.write("Those are things I truly appreciate more than I say.", font=("Courier", 15, "italic"))
+    time.sleep(2)
+
+    pen.up() 
+    pen.setpos(-600,-165) 
+    pen.down() 
+    pen.color('deep pink') 
+    pen.write("If today is a hard day for you, I hope this small surprise helps.", font=("Courier", 15, "italic"))
+    time.sleep(2)
+
+    pen.up() 
+    pen.setpos(-600,-195) 
+    pen.down() 
+    pen.color('deep pink') 
+    pen.write("I added a flower here because I know you love tulips 🌷", font=("Courier", 15, "italic"))
+    time.sleep(2)
+
+    pen.up() 
+    pen.setpos(-600,-225) 
+    pen.down() 
+    pen.color('deep pink') 
+    pen.write("Imagine this tulip as a small reminder that someone cares.", font=("Courier", 15, "italic"))
+    time.sleep(2)
+
+    pen.up() 
+    pen.setpos(-600,-255) 
+    pen.down() 
+    pen.color('deep pink') 
+    pen.write("You deserve happiness and many beautiful moments.", font=("Courier", 15, "italic"))
+    time.sleep(2)
+
+    pen.up() 
+    pen.setpos(-600,-285) 
+    pen.down() 
+    pen.color('deep pink') 
+    pen.write("Even if you're upset right now, I hope you smile again soon.", font=("Courier", 15, "italic"))
+    time.sleep(2)
+
+    pen.up() 
+    pen.setpos(-600,-315) 
+    pen.down() 
+    pen.color('red') 
+    pen.write("This code and tulip 🌷 are just for you, my favourite girl.", font=("Courier", 15, "italic"))
+    time.sleep(2)
+
+# ------------------- Run the text -------------------
+txt()
+
+# Keep the window open
+win.mainloop()
